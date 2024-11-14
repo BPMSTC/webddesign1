@@ -1,0 +1,343 @@
+/* Base styles */
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1e40af;
+    --secondary-color: #475569;
+    --background-light: #f8fafc;
+    --background-dark: #1e293b;
+    --border-color: #e2e8f0;
+    --hover-color: #f1f5f9;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --success-color: #059669;
+    --warning-color: #d97706;
+    --error-color: #dc2626;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+/* Page Layout */
+.tables-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.table-section {
+    margin-bottom: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+    padding: 20px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Table Controls */
+.table-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/*zebra striping*/
+
+/* Add or update these CSS variables in :root */
+:root {
+    /* ... existing variables ... */
+    --stripe-color: #f1f5f9;  /* Slightly darker than the original for better contrast */
+    --stripe-hover: #e2e8f0;  /* Darker shade for hover state on striped rows */
+}
+
+/* Update zebra striping with new colors */
+.demo-table tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+.demo-table tbody tr:nth-child(odd) {
+    background-color: var(--stripe-color);
+}
+
+/* Enhance hover states for both striped and non-striped rows */
+.demo-table tbody tr:hover {
+    background-color: var(--hover-color);
+}
+
+.demo-table tbody tr:nth-child(odd):hover {
+    background-color: var(--stripe-hover);
+}
+
+/* Ensure stripe pattern maintains across all three table types */
+.esports-table tbody tr:nth-child(odd),
+.festival-table tbody tr:nth-child(odd),
+.startup-table tbody tr:nth-child(odd) {
+    background-color: var(--stripe-color);
+}
+
+
+
+
+
+.search-input {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.95em;
+    width: 200px;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.filter-select {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.95em;
+    background-color: white;
+}
+
+/* Base Table Styles */
+.data-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    box-shadow: var(--shadow-sm);
+}
+
+.data-table thead {
+    background-color: var(--background-dark);
+    color: white;
+}
+
+.data-table th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.data-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.95em;
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Row Styling */
+.data-table tbody tr:nth-child(odd) {
+    background-color: var(--background-light);
+}
+
+.data-table tbody tr:hover {
+    background-color: var(--hover-color);
+}
+
+/* Sort Indicators */
+.sort-header {
+    position: relative;
+    padding-right: 25px;
+}
+
+.sort-header::after {
+    content: '↕';
+    position: absolute;
+    right: 8px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.sort-header.sort-asc::after {
+    content: '↑';
+    color: white;
+}
+
+.sort-header.sort-desc::after {
+    content: '↓';
+    color: white;
+}
+
+/* Status Indicators */
+.status-cell {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.status-active {
+    background-color: rgba(5, 150, 105, 0.1);
+    color: var(--success-color);
+}
+
+.status-inactive {
+    background-color: rgba(220, 38, 38, 0.1);
+    color: var(--error-color);
+}
+
+.status-pending {
+    background-color: rgba(217, 119, 6, 0.1);
+    color: var(--warning-color);
+}
+
+/* Esports Table Specific */
+.esports-table .team-name {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.esports-table .prize-money {
+    font-family: 'Monaco', monospace;
+    color: var(--success-color);
+}
+
+/* Festival Table Specific */
+.festival-table .date-cell {
+    white-space: nowrap;
+}
+
+.festival-table .price-range {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+}
+
+.festival-table .genre-badge {
+    background: var(--primary-color);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+}
+
+/* Startup Table Specific */
+.startup-table .company-name {
+    font-weight: 500;
+    color: var(--primary-dark);
+}
+
+.startup-table .funding {
+    font-family: 'Monaco', monospace;
+    color: var(--success-color);
+    font-weight: 500;
+}
+
+.startup-table .growth-rate {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.startup-table .growth-rate::before {
+    content: '↗';
+    color: var(--success-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .table-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .data-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .table-section {
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+    .table-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Loading States */
+.loading-row {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.updating {
+    animation: pulse 1.5s infinite;
+}
+
+/* Tooltips */
+[data-tooltip] {
+    position: relative;
+    cursor: help;
+}
+
+[data-tooltip]:hover::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 8px;
+    background: var(--background-dark);
+    color: white;
+    font-size: 0.85em;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+/* Print Styles */
+@media print {
+    .table-controls {
+        display: none;
+    }
+
+    .data-table {
+        box-shadow: none;
+    }
+
+    .data-table th {
+        background-color: white !important;
+        color: black;
+    }
+
+    .status-cell {
+        background: none !important;
+    }
+}

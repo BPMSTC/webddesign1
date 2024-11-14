@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+body {
+    /* Write CSS rules for the body tag. Set the display property to create a flexible box layout. 
+       Then, specify the direction of the flex items with flex-direction as row and have the flex items wrap with flex-wrap. */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header {
+    /* For the header element, set the flex-basis property. This property defines the initial size of the header. 
+       What value would you choose to make it span the full width of the flex container? */
+    flex-basis: 100%;
+}
+
+nav {
+    /* Similar to the header, set the flex-basis for the nav element. Think about how much width it should take up in the flex container. */
+    flex-basis: 100%;
+}
+
+.section-left {
+    /* Determine the flex-basis for the element with the class 'section-left'. This will decide its initial width in the flex container. 
+       What percentage of the container should it cover?  Try 60% and go up or down to see what works best */
+    flex-basis: 60%;
+}
+
+.section-right {
+    /* Assign a flex-basis to the 'section-right'. Consider its relationship with '.section-left' in terms of the space they should occupy. */
+    /* As a total they cannot exceed 100% */
+    flex-basis: 40%;
+}
+
+footer {
+    /* Set the flex-basis for the footer. How should it be sized compared to the full width of the flex container? */
+    flex-basis: 100%;
+}

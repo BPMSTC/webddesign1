@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+article img {
+    border: 2px outset gray;
+    padding: 1px;
+    margin: 3px;
+}
+
+ul.resources-ul-internet-img > li{
+    list-style-image: url(../images/icons/internet-small.png);
+}
+
+#tree-img {
+    width: 190px;
+    height: 250px;
+}
+
+#cloud-img {
+    width: 275px;
+    height: 200px;
+}
+
+.heading-bold {
+    font-weight: bold;
+}
+
+.list-lastitem-lightbulb > li:last-child {
+    list-style-image: url(../images/icons/light-bulb-small.png);
+}
+
+div > p::first-letter {
+    font-size: 24px;
+}

@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+div, span {
+    margin: 0;
+    padding: 0;
+}
+
+.container
+{
+    border: 1px solid black;
+    margin: 50px 15px;
+}
+
+.box-inline-block
+{
+    display: inline-block;
+}
+
+.box
+{
+    width: 50px;
+    height: 50px;
+}
+
+.box-red
+{
+    background-color: red;
+}
+
+.box-green
+{
+    background-color: green;
+}
+
+.box-blue
+{
+    background-color: blue;
+    color: white
+}
+
+.box-light-coral
+{
+    background-color:lightcoral;
+}
+
+.box-light-green
+{
+    background-color:lightseagreen;
+}
+
+.box-light-sky-blue
+{
+    background-color:lightskyblue;
+}
+
+.center {
+    text-align: center;
+
+    /* the hack to vertical align the content for a 1) fixed height parent element and there is only 1 line of code 
+        - http://phrogz.net/css/vertical-align/index.html */
+    line-height: 3em;
+}
+
+p {
+    font-weight: bolder;
+}
+
+/* Fixed Positioning Styles */
+
+/* Container to demonstrate fixed positioning context */
+.fixed-container {
+    /* Set a height of 500px to demonstrate scrolling effect */
+    height: 500px;
+
+    /* set position as relative to contain the fixed positioned box */
+    position: relative;
+}
+
+/* Style for the fixed positioned box */
+.box-fixed-pos {
+    /* set position as fixed - element is positioned relative to the viewport */
+    position: fixed;
+
+    /* Position 20px from the top of the viewport */
+    top: 20px;
+
+    /* Position 20px from the right of the viewport */
+    right: 20px;
+
+    /* set a background color of purple for demonstration */
+    background-color: purple;
+}
+
+/* Additional styles for the fixed box */
+.box-purple {
+    /* Same color as .box-fixed-pos for consistency */
+    background-color: purple;
+}

@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/* Global Styles */
+body {
+    /* Sets up a grid layout for the entire <body> element. 
+       This is the container for all grid items. */
+    display: grid;
+}
+
+/* Media Query for screens wider than or equal to 800px */
+@media screen and (min-width: 800px) {
+
+    /* Styles for <body> under the media query */
+    body {
+        /* Defines the column structure of the grid.
+           - repeat(12, minmax(100px, 1fr)): Creates 12 columns. Each column has a minimum width 
+             of 100px and a maximum width of 1 fraction unit (1fr), which means they will 
+             distribute the available space evenly after satisfying the minimum width of 100px. */
+        grid-template-columns: repeat(12, minmax(100px, 1fr));
+
+        /* Defines the row structure of the grid.
+           - auto: The height of the rows is determined by the content inside them. */
+        grid-template-rows: auto;
+
+        /* Specifies named grid areas.
+           - Each "word" represents a cell in the grid and the name assigned to it.
+           - This layout defines a grid with 5 rows and 12 columns.
+           - 'head', 'nav', 'section', 'article', 'aside', 'foot' are the names assigned to 
+             different parts of the grid. */
+        grid-template-areas:
+            "head head head head head head head head head head head head"
+            "nav  nav  nav  nav  nav  nav  nav  nav  nav  nav  nav  nav"
+            "section section section section section section section section article article article article"
+            "section section section section section section section section aside   aside   aside   aside"
+            "foot  foot  foot  foot  foot  foot  foot  foot  foot  foot  foot  foot";
+    }
+
+    /* CSS for <header> element */
+    header {
+        /* Assigns the <header> element to the 'head' grid area. */
+        grid-area: head;
+    }
+
+    /* CSS for <nav> element */
+    nav {
+        /* Assigns the <nav> element to the 'nav' grid area. */
+        grid-area: nav;
+    }
+
+    /* CSS for <section> element */
+    section {
+        /* Assigns the <section> element to the 'section' grid area. */
+        grid-area: section;
+    }
+
+    /* CSS for <article> element */
+    article {
+        /* Assigns the <article> element to the 'article' grid area. */
+        grid-area: article;
+    }
+
+    /* CSS for <aside> element */
+    aside {
+        /* Assigns the <aside> element to the 'aside' grid area. */
+        grid-area: aside;
+    }
+
+    /* CSS for <footer> element */
+    footer {
+        /* Assigns the <footer> element to the 'foot' grid area. */
+        grid-area: foot;
+    }
+
+    /* CSS for <main> element */
+    main {
+        /* Positions the <main> element in the grid.
+           - grid-row: 3 / 5;: Spans from the start of the 3rd row to the end of the 4th row.
+           - grid-column: 1 / span 12;: Spans all 12 columns starting from the first one. */
+        grid-row: 3 / 5;
+        grid-column: 1 / span 12;
+    }
+}

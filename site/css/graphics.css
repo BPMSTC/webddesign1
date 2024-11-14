@@ -1,0 +1,357 @@
+@charset "utf-8";
+
+/* Note: Gradient background don't print 
+
+    layout items:
+    height: 100vh (100% of the viewport height)
+        - content may spill out on mobile devices, so adjust accordingly
+    width: 80vw (80% of viewport width)
+        - *Note: the difference with vs & % (percent) is the % (percent) is of its parent
+        
+        - vmax & vmin
+
+    /* look for the vh and vw
+
+*/
+
+main * {
+    box-sizing: border-box;;
+}
+
+main > div {
+    margin: 1vw; /* 25px; */
+    text-align: center;
+    font-size: 1.5em;
+
+    border: 1px solid black;
+}
+
+main > div > div {
+    border: 1px dotted black;
+}
+
+main p {
+    padding: 3px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.wid20 {
+    width: 20%;
+}
+
+.wid30 {
+    width: 30%;
+}
+
+.wid45 {
+    width: 45%;
+}
+
+.wid100 {
+    width: 100%;
+}
+
+.bg {
+    /* change the height to vh */
+    height: 10vh;
+    min-height: 1vh; /* 250px */
+    max-height: 25vh;
+}
+
+#img-bg-1 {
+    background-image: url("../images/lucky-bamboo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 50%;
+}
+
+#img-bg-2 {
+    background-image: url("../images/lucky-bamboo.jpg"), url("../images/garden-stone.JPG");
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    opacity: 70%;
+}
+
+.bg-attach {
+    background-image: url("../images/dog-small.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 80%;
+    overflow:auto;
+}
+
+#img-bg-attach-fixed {
+    background-attachment: fixed;
+}
+
+#img-bg-attach-local {
+    background-attachment: local;
+}
+
+#img-bg-attach-scroll {
+    background-attachment: scroll;
+    
+}
+
+.bg-grad {
+    /* change the height to vh */
+    height: 15vh; /* 150px; */
+}
+
+#lin-bg-1 {
+    background: linear-gradient(pink, lightgreen, lightskyblue);
+}
+
+#lin-bg-2 {
+    background: linear-gradient(pink 40%, lightgreen 80%, lightskyblue);
+}
+
+#lin-bg-3 {
+    background: linear-gradient(60deg, pink 40%, lightgreen 80%, lightskyblue);
+}
+
+
+#lin-bg-5 {
+    background: linear-gradient(pink 0% 33%, lightgreen 33% 66%, lightskyblue 66% 100%);
+}
+
+#lin-bg-6 {
+    background: linear-gradient(120deg, pink 0% 33%, lightgreen 33% 66%, lightskyblue 66% 100%);
+}
+
+
+#lin-bg-10 {
+    background: linear-gradient(to right, rgba(255,0,0,.5), transparent);
+}
+
+#lin-bg-11 {
+    background: linear-gradient(to left, rgba(0,255,0,.5), transparent);
+}
+
+#lin-bg-12 {
+    background: linear-gradient(to bottom, rgba(0,0,255,.5), transparent);
+}
+
+#lin-bg-13 {
+    background: 
+        linear-gradient(to right, rgba(255,0,0,.5), transparent),
+        linear-gradient(to left, rgba(0,255,0,.5), transparent),
+        linear-gradient(to bottom, rgba(0,0,255,.5), transparent);
+}
+
+#rep-lin-bg-1 {
+    background: repeating-linear-gradient(pink, lightgreen, lightskyblue 25%);
+}
+
+#rep-lin-bg-2 {
+    background: repeating-linear-gradient(160deg, pink, lightgreen, lightskyblue 25%);
+}
+
+
+#rep-lin-bg-5 {
+    background: repeating-linear-gradient(pink 0px 10px, lightgreen 10px 13px, lightskyblue 13px 25px);
+}
+
+#rep-lin-bg-6 {
+    background: repeating-linear-gradient(290deg, pink 0px 10px, lightgreen 10px 13px, lightskyblue 13px 25px);
+}
+
+
+#rep-lin-bg-10 {
+    background: repeating-linear-gradient(transparent, crimson 40px);
+}
+
+#rep-lin-bg-11 {
+    background: repeating-linear-gradient(90deg, transparent, gray 100px);
+}
+
+#rep-lin-bg-12 {
+    background: 
+        repeating-linear-gradient(transparent, crimson 40px),
+        repeating-linear-gradient(90deg, transparent, gray 100px);
+}
+
+
+.bg-grad-rad {
+    /* change to use vh */
+    height: 25vh; /* 250px; */
+}
+
+#rad-bg-1 {
+    background: radial-gradient(ellipse at center, pink, white,  lightskyblue);
+}
+
+#rad-bg-2 {
+    background: radial-gradient(ellipse at center, pink 0% 33%, white 33% 66%, lightskyblue 66% 100%);
+}
+
+#rad-bg-5 {
+    background: radial-gradient(circle at center, pink, white, lightskyblue);
+}
+
+#rad-bg-6 {
+    background: radial-gradient(circle at center, pink 0% 33%, white 33% 66%, lightskyblue 66% 100%);
+}
+
+#rad-bg-10 {
+    background: radial-gradient(circle at left, rgba(255,0,0,.8), rgba(255,255,255,.5), transparent);
+}
+
+#rad-bg-11 {
+    background: radial-gradient(circle at right, rgba(0,255,0,.8), rgba(255,255,255,.5), transparent);
+}
+
+#rad-bg-12 {
+    background: radial-gradient(circle at top, rgba(0,0,255,.8), rgba(255,255,255,.5), transparent);
+}
+
+#rad-bg-13 {
+    background:
+        radial-gradient(circle at left, rgba(255,0,0,.8), rgba(255,255,255,.5), transparent),
+        radial-gradient(circle at right, rgba(0,255,0,.8), rgba(255,255,255,.5), transparent),
+        radial-gradient(circle at top, rgba(0,0,255,.8), rgba(255,255,255,.5), transparent);
+}
+
+.border {
+    width: 30vw; /* 300px; */
+    height: 30vh; /* 300px; */
+
+    border-width: 10px;
+    border-style: none;
+}
+
+#bd-1 {
+    border-style: dashed solid double groove;
+    border-color: red green blue purple;
+}
+
+#bd-2 {
+    background-color: orange;
+    border-radius: 50%;
+}
+
+#bd-3 {
+    background-color: gray;
+    border-radius: 25%;
+}
+
+#bd-4 {
+    background-color: gold;
+
+    border-top-left-radius:     10px 40px;
+    border-top-right-radius:    40px 20px;
+    border-bottom-right-radius: 30px 150px;
+    border-bottom-left-radius:  150px 30px;    
+}
+
+#bd-5 {
+    background-color: silver;
+    border-radius: 50% 20% / 10% 40% 25%;    
+}
+
+.bd-img {
+    border: 30px solid;
+}
+
+#bd-10 {
+    border-image-source: linear-gradient(red, yellow, blue);
+    border-image-slice: 30;
+    border-image-width: 10px 15px;
+}
+
+#bd-11 {
+    border-image-source: url("../images/stormy.jpg");
+    border-image-slice: 30;
+}
+
+.shadow-container  div {
+    height: auto;
+    padding: 15px;
+    margin: 25px;
+}
+
+#text-shadow-1 p {
+    text-shadow: gray 10px 5px 2px;
+}
+
+#text-shadow-2 p {
+    text-shadow: blue -5px -10px 2px;
+}
+
+#text-shadow-3 p {
+    text-shadow: gray 10px 5px 2px, blue -5px -10px 2px;
+}
+
+#box-shadow-1 {
+    box-shadow: gray 10px 5px 2px;
+}
+
+#box-shadow-2 {
+    box-shadow: black -5px -10px 2px;
+}
+
+#box-shadow-3 {
+    box-shadow: gray 10px 5px 2px, black -5px -10px 2px;
+}
+
+#filters {
+    width: auto;
+    border: none;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.img-filter {
+    margin: 15px;
+    cursor: pointer;
+}
+
+#birdhouse-img:hover {
+    filter: blur(2px);
+}
+
+#eiffel-tower-img:hover {
+    filter: grayscale(1);
+    /* 0 (unchanged) - 1 (complete grayscale) */
+}
+
+#elves-img:hover {
+    filter: brightness(0.9);
+}
+
+#cherry-blossom-img:hover {
+    filter: sepia(1);
+}
+
+#animal-display-img:hover {
+    filter: invert(75%) drop-shadow(16px 16px 20px gray);
+}
+
+.scene {
+    perspective: 400px;
+}
+
+#herbs-img:hover {
+    transform: rotateY(20deg);
+}
+
+#cups-img:hover {
+    transform: translateY(130px);
+}
+
+#rocky-img:hover {
+    transform: scale(150%);
+}
+
+#uprooted-small-img:hover {
+    transform: rotate(90deg) scale(120%) translateX(60px);
+}

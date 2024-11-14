@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Graphic Design</title>
+    <link rel="icon" href="../images/icons/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/graphics.css">
+    <link rel="stylesheet" href="../css/master-print.css" media="print">
+  </head>
+  <body>
+    <header id="top">
+      <img src="../images/wd1.png" alt="logo">
+      <h1>Web Design</h1>
+    </header>
+    <nav>
+      <!--Add a navicon-->
+      <a id="navicon" href="#"><img src="../images/icons/navicon.png" alt="navicon"></a>
+      <ul>
+        <li><a href="../index.html"> <img src="../images/icons/home.png" alt="home"> Home</a></li>
+        <li><a href="fundamentals.html"> <img src="../images/icons/document.png" alt="fundamentals"> HMTL Fundamentals</a></li>
+        <li><a href="fundamentals-flex.html"> <img src="../images/icons/document.png" alt="flex"> Flex Layout</a></li>
+        <li><a href="positioning.html"> <img src="../images/icons/trello-website-logo-small.png" alt="positioning"> Position &amp; Float</a></li>
+        <li><a href="graphics.html"> <img src="../images/icons/document.png" alt="graphic"> Graphic Design</a></li>
+        <li><a href="fundamentals-static.html"> <img src="../images/icons/document.png" alt="static"> Static Layout</a></li>
+        <li><a href="dommanipulation.html"> <img src="../images/icons/document.png" alt="DOM js"> DOM manipulation</a></li>
+        <li><a href="gallery.html"> <img src="../images/icons/document.png" alt="gallery grid">Gallery Grid</a></li>
+
+      </ul>
+    </nav>
+    <main>
+      <!-- background styles: background image -->
+      <h2>Using image as background &amp; Opacity</h2>
+      <div id="img-bg-1" class="bg">
+        <p>Use image as a background and change the opacity</p>
+      </div>
+      <div id="img-bg-2" class="bg">
+        <p>Use multiple images as a background and change the opacity</p>
+      </div>
+
+      <h2>Using image as background attachment</h2>
+      <div class="container">
+        <div id="img-bg-attach-fixed" class="bg bg-attach wid30">
+          <p>Fixed: Doesn't scroll with page or content</p>
+          <p>
+           The background-attachment: fixed property in CSS is a powerful tool for creating visually engaging web pages. When applied to a background image, it causes the image to remain stationary while the rest of the page scrolls. This creates a parallax effect, where the background appears to move slower than the foreground content. This technique can add depth and interest to your designs, especially when combined with other styling elements like background-position and opacity.
+          </p>
+        </div>
+        <div id="img-bg-attach-local" class="bg bg-attach wid30">
+          <p>Local: Scroll with content</p>
+          <p>
+            The background-attachment: local property in CSS is less commonly used than fixed, but it can be beneficial in certain scenarios. When applied to a background image, it causes the image to scroll along with the page content. This is particularly useful when you want the background to remain consistent with the rest of the page's layout and avoid any parallax effects. For instance, if you have a background image that complements the page's content and should always be visible, local would be the appropriate choice.
+          </p>
+        </div>
+        <div id="img-bg-attach-scroll" class="bg bg-attach wid30">
+          <p>Scroll: Scroll with Page</p>
+          <p>
+            The background-attachment: scroll property is the default value for background images. When applied, the image will scroll along with the page content, just like the local property. However, there are some subtle differences.
+
+Compatibility: scroll is more widely supported across browsers than local.
+Behavior: In some older browsers or specific scenarios, there might be slight variations in how scroll and local behave, especially when combined with other CSS properties.
+Generally, you can use scroll without worrying about compatibility issues or unexpected behavior. However, if you need precise control over background image scrolling or are targeting older browsers, it's worth considering the specific requirements and testing both scroll and local to ensure the desired effect.
+          </p>
+        </div>
+      </div>
+
+      <!-- Linear Gradient backgrounds -->
+      <h2>Linear Gradient</h2>
+      <div class="container">
+        <div id="lin-bg-1" class="bg-grad wid30">
+          <p>1&#41; Linear Gradient background (default - evenly spaced)</p>
+        </div>
+        <div id="lin-bg-2" class="bg-grad wid30">
+          <p>2&#41; Linear Gradient background: transitions to 1st color at 40%, then to 2nd color at 80%, then to 3rd color at 100%</p>
+        </div>
+        <div id="lin-bg-3" class="bg-grad wid30">
+          <p>3&#41; Linear Gradient background (similar to sample 2), but at 60° angle</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="lin-bg-5" class="bg-grad wid45">
+          <p>5&#41; Linear Gradient background with specified color stops for hard lines</p>
+        </div>
+        <div id="lin-bg-6" class="bg-grad wid45">
+          <p>6&#41; Linear Gradient background (similar to sample 5), but at 120° angle</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="lin-bg-10" class="bg-grad wid30">
+          <p>10&#41; Transition from  Red (at 70% opacity) to Transparent (to right) Linear Gradient background</p>
+        </div>
+        <div id="lin-bg-11" class="bg-grad wid30">
+          <p>11&#41; Transition from Green (at 70% opacity) to Transparent (to left) Linear Gradient background</p>
+        </div>
+        <div id="lin-bg-12" class="bg-grad wid30">
+          <p>12&#41; Transition from Blue (at 70% opacity) to Transparent (to bottom) Linear Gradient background</p>
+        </div>
+        <div id="lin-bg-13" class="bg-grad wid100">
+          <p>13&#41; Stacking multiple Linear Gradient background, combining samples 10, 11, and 12 above</p>
+        </div>
+      </div>
+
+      <!-- Repeating Linear Gradient backgrounds-->
+      <h2>Repeating Linear Gradient</h2>
+      <div class="container">
+        <div id="rep-lin-bg-1" class="bg-grad wid45">
+          <p>1&#41; Repeating Linear Gradient background with 3rd color stop at 25%</p>
+        </div>
+        <div id="rep-lin-bg-2" class="bg-grad wid45">
+          <p>2&#41; Repeating Linear Gradient background (similar to sample 1), but at 160° angle</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="rep-lin-bg-5" class="bg-grad wid45">
+          <p>5&#41; Repeating Linear Gradient background at multiple specified stops for hard lines</p>
+        </div>
+        <div id="rep-lin-bg-6" class="bg-grad wid45">
+          <p>6&#41; Repeating Linear Gradient background (similar to sample 5), but at 290° angle</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="rep-lin-bg-10" class="bg-grad wid45">
+          <p>10&#41; Repeating Linear Gradient background transitioning from Transparent to Red </p>
+        </div>
+        <div id="rep-lin-bg-11" class="bg-grad wid45">
+          <p>11&#41; Repeating Linear Gradient background transitioning from Transparent to Gray at 90° angle</p>
+        </div>
+        <div id="rep-lin-bg-12" class="bg-grad wid100">
+          <p>12&#41; Stacking multiple Repeating Linear Gradient background, combining samples 11 and 12 above</p>
+        </div>
+      </div>
+
+      <!-- Radial Gradient backgrounds-->
+      <h2>Radial Gradient</h2>
+      <div class="container">
+        <div id="rad-bg-1" class="bg-grad-rad wid45">
+          <p>1&#41; Ellipse Gradient background (default)</p>
+        </div>
+        <div id="rad-bg-2" class="bg-grad-rad wid45">
+          <p>2&#41; Ellipse Gradient background with hard lines</p>
+        </div>
+      </div>
+      <div class="container">
+        <div id="rad-bg-5" class="bg-grad-rad wid45">
+          <p>5&#41; Circle Gradient background (default)</p>
+        </div>
+        <div id="rad-bg-6" class="bg-grad-rad wid45">
+          <p>6&#41; Circle Gradient background with hard lines</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="rad-bg-10" class="bg-grad-rad wid30">
+          <p>10&#41; Circle Gradient background at left</p>
+        </div>
+        <div id="rad-bg-11" class="bg-grad-rad wid30">
+          <p>11&#41; Circle Gradient background at right</p>
+        </div>
+        <div id="rad-bg-12" class="bg-grad-rad wid30">
+          <p>12&#41; Circle Gradient background at top</p>
+        </div>
+        <div id="rad-bg-13" class="bg-grad-rad wid100">
+          <p>13&#41; Stacking multiple Circle Gradient backgrounds, containing samples 10, 11, 12 above </p>
+        </div>
+      </div>
+
+      <!-- Border Designs -->
+      <h2>Border Designs &amp; Border Radius</h2>
+      <div class="container">
+        <div id="bd-1" class="border">
+          <p>Border Styles &amp; Colors</p>
+        </div>
+        <div id="bd-2" class="border">
+          <p>50%<br>Border Radius</p>
+        </div>
+        <div id="bd-3" class="border">
+          <p>25%<br>Border Radius</p>
+        </div>
+        <div id="bd-4" class="border">
+          <p>Customized Border Radius with individual axis specification</p>
+        </div>
+        <div id="bd-5" class="border">
+          <p>Customized Border Radius with individual axis specification</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="bd-10" class="border bd-img">
+          <p>Use a Gradient as border image</p>
+        </div>
+        <div id="bd-11" class="border bd-img">
+          <p>Use an Image as border image</p>
+        </div>
+      </div>
+
+      <!-- Text Shadows -->
+      <h2>Text Shadow</h2>
+      <div class="container shadow-container">
+        <div id="text-shadow-1" class="bg wid20">
+          <p>Simple<br>Shadow</p>
+        </div>
+        <div id="text-shadow-2" class="bg wid20">
+          <p>Simple<br>Shadow</p>
+        </div>
+        <div id="text-shadow-3" class="bg wid20">
+          <p>Combine<br>Shadows</p>
+        </div>
+      </div>
+
+      <!-- Box Shadows -->
+      <h2>Box Shadow</h2>
+      <div class="container shadow-container">
+        <div id="box-shadow-1" class="bg wid20">
+          <p>Simple Box Shadow</p>
+        </div>
+        <div id="box-shadow-2" class="bg wid20">
+          <p>Simple Box Shadow</p>
+        </div>
+        <div id="box-shadow-3" class="bg wid20">
+          <p>Combine Box Shadows</p>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <h2>Filters (hover over image to apply filter)</h2>
+      <div id="filters" class="container">
+          <img id="birdhouse-img" alt="birdhouse" class="img-filter" src="../images/birdhouse.jpg">
+          <img id="eiffel-tower-img" alt="tower" class="img-filter" src="../images/eiffel-tower.jpg">
+          <img id="elves-img" alt="elves" class="img-filter" src="../images/elves.jpg">
+          <img id="cherry-blossom-img" alt="cherry" class="img-filter" src="../images/cherry-blossom.jpg">
+          <img id="animal-display-img" alt="animal" class="img-filter" src="../images/animal-display-big.jpg">
+      </div>
+
+      <!-- Transformations -->
+      <h2>Transformations</h2>
+      <div class="container">
+        <div class="scene">
+          <img id="herbs-img" alt="herbs" src="../images/herbs.jpg">
+        </div>
+        <div class="scene">
+          <img id="cups-img" alt="cups" src="../images/cups.jpg">
+        </div>
+        <div class="scene">
+          <img id="rocky-img" alt="rockyimage" src="../images/rocky.jpg">
+        </div>
+        <div class="scene">
+          <img id="uprooted-small-img" alt="uprooted" src="../images/uprooted-small.jpg">
+        </div>
+      </div>
+
+      <!-- Image Map -->
+      <h2>Image Map</h2>
+      <div>
+        <img id="social-media-img" alt="socialmedia" src="../images/social-media.png" usemap="#social-media-map">
+        <map name="social-media-map">
+          <area shape="circle" coords="90,100,101" href="https://twitter.com/" alt="twitterx" target="_blank">
+          <area shape="circle" coords="100,415,101" href="https://www.youtube.com/" alt="youtube" target="_blank">
+          <area shape="circle" coords="410,90,101" href="https://www.facebook.com/" alt="fb" target="_blank">
+          <area shape="circle" coords="415,410,101" href="https://www.instagram.com/" alt="ig" target="_blank">
+        </map>
+      </div>
+    </main>
+    <footer>
+      <address>
+        <a href="mailto:me@memyselfandi.com">me@memyselfandi.com</a><br>
+        <a href="tel:+15555555555">(555)555&dash;5555</a>
+        <p>
+          555 Fake Street South<br>
+          My City, ST 12345
+        </p>
+      </address>
+      <p>© 2024 Web Design 1</p>
+      <div>
+        <p><a href="#top">Go to Top</a></p>
+        <p><a href="../index.html#top">Go to Top of Home page</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
+

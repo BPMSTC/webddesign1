@@ -1,0 +1,202 @@
+@charset "utf-8";
+
+@import url("reset.css");
+/* Create the new css file and import, but since there are not rules yet, it should not matter */
+@import url(../css/master-grid.css);
+
+@font-face {
+font-family: Rye;
+src: url(../fonts/Rye-Regular.woff) format('woff'),
+    url(../fonts/Rye-Regular.ttf) format('truetype');
+}
+
+@font-face {
+font-family: Champagne;
+src: url(../fonts/cac_champagne.woff) format('woff'),
+    url(../fonts/cac_champagne.ttf) format('truetype');
+}
+
+@font-face {
+font-family: Lobster;
+src: url(../fonts/Lobster-Regular.ttf) format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color:whitesmoke;
+}
+
+nav a img {
+    width: 1.5625em;
+    height: 1.5625em;
+    vertical-align: bottom;
+}
+
+div, main, section, article, aside {
+
+    margin: 10px;
+    padding: 5px;
+}
+
+header {
+    background-color: aliceblue;
+
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 2px; 
+
+    padding: 5px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+nav {
+    background-color:cornflowerblue;
+
+    margin-bottom: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    opacity: 100%;
+    padding: 5px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+nav ul > li {
+    padding: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 5px;
+    padding: 3px;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-size: 1em;
+}
+
+header h1 {
+    font-family: Rye;
+    font-size: 4em;
+}
+
+h2 {
+    font-family: Lobster;
+    font-size: 3em;
+}
+
+h3 {
+    font-family: Champagne;
+    font-size: 2em;
+}
+
+p, li, dt, dd {
+    line-height: 1.5em;
+}
+
+nav a {
+    font-weight: bolder;
+}
+
+ul > li{
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+ol > li {
+    list-style-type: decimal-leading-zero;
+    list-style-position: inside;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline-block
+}
+
+dt {
+    font-style: italic;
+}
+
+dd {
+    text-indent: 2em;
+}
+
+ol a, ul a {
+    color:midnightblue;
+}
+
+a:link {
+    
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+blockquote {
+    quotes: initial; 
+}
+
+blockquote::before {
+    content: open-quote;
+}
+
+blockquote::after {
+    content: close-quote;
+}
+
+footer {
+    font-size: .75em;
+    background-color: aliceblue;
+    padding: 3px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 3px;
+}
+
+footer > address {
+    order: 1;
+}
+
+footer > p {
+    order: 3;
+}
+
+footer > div {
+    order: 2;
+
+    
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+@media screen and (min-width: 800px) {
+    nav ul {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

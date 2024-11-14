@@ -1,0 +1,318 @@
+:root {
+    --ai-primary: #6b3bd1;
+    --ai-secondary: #2d0f5a;
+    --ai-accent: #00f4cf;
+    --ai-gradient: linear-gradient(135deg, #6b3bd1 0%, #2d0f5a 100%);
+    --ai-text: #2a2a2a;
+    --ai-error: #ff4757;
+    --ai-success: #2ed573;
+}
+
+body {
+    background: #f8f9fc;
+    background-image: 
+        radial-gradient(circle at 25px 25px, rgba(107, 59, 209, 0.05) 2%, transparent 0%),
+        radial-gradient(circle at 75px 75px, rgba(0, 244, 207, 0.05) 2%, transparent 0%);
+    background-size: 100px 100px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--ai-text);
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 8px 32px rgba(107, 59, 209, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--ai-gradient);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-top: 1.5rem;
+}
+
+.form-header h1 {
+    color: var(--ai-secondary);
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-header p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 1.75rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--ai-secondary);
+    font-size: 0.95rem;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--ai-primary);
+    box-shadow: 0 0 0 3px rgba(107, 59, 209, 0.1);
+}
+
+.checkbox-group {
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group:hover {
+    background-color: rgba(107, 59, 209, 0.05);
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    display: inline-block;
+    margin-left: 0.5rem;
+    color: var(--ai-text);
+}
+
+.checkbox-container {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.helper-text {
+    color: #666;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.error {
+    display: none;
+    color: var(--ai-error);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgba(255, 71, 87, 0.1);
+    border-radius: 4px;
+}
+
+.error::before {
+    content: '⚠️';
+    font-size: 0.875rem;
+}
+
+.submit-btn {
+    background: var(--ai-gradient);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(107, 59, 209, 0.2);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.success-message {
+    display: none;
+    color: var(--ai-success);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    background: rgba(46, 213, 115, 0.1);
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* AI-themed decorative elements */
+.ai-circuit {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.ai-circuit-1 {
+    top: -75px;
+    right: -75px;
+    background: url('../images/circuit-pattern.svg');
+    transform: rotate(45deg);
+}
+
+.ai-circuit-2 {
+    bottom: -75px;
+    left: -75px;
+    background: url('../images/circuit-pattern.svg');
+    transform: rotate(225deg);
+}
+
+/* Required field indicator */
+.required::after {
+    content: '*';
+    color: var(--ai-error);
+    margin-left: 0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .form-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .form-header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Button group styles */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.submit-btn {
+    flex: 2;
+}
+
+.reset-btn {
+    flex: 1;
+    background: transparent;
+    border: 2px solid var(--ai-primary);
+    color: var(--ai-primary);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.reset-btn:hover {
+    background: rgba(107, 59, 209, 0.1);
+}
+
+/* Validation states */
+.checkbox-group.valid {
+    background-color: rgba(46, 213, 115, 0.1);
+}
+
+.checkbox-group.invalid {
+    background-color: rgba(255, 71, 87, 0.1);
+}
+
+.success-message {
+    background-color: rgba(46, 213, 115, 0.1);
+    border: 1px solid var(--ai-success);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Add to your existing CSS */
+input.valid, textarea.valid {
+    border-color: var(--ai-success);
+    background-color: rgba(46, 213, 115, 0.05);
+}
+
+input.invalid, textarea.invalid {
+    border-color: var(--ai-error);
+    background-color: rgba(255, 71, 87, 0.05);
+}
+
+.error {
+    display: none;
+    color: var(--ai-error);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgba(255, 71, 87, 0.1);
+    border-radius: 4px;
+}
+
+.logo-container {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(107, 59, 209, 0.1);
+    padding: 0.5rem;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Add a subtle hover effect */
+.logo-container:hover .logo {
+    transform: scale(1.05);
+}
+
+/* Add responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .logo-container {
+        width: 280px;
+        height: 280px;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container {
+        width: 200px;
+        height: 200px;
+        padding: 0.75rem;
+    }
+}

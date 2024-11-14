@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Positioning</title>
+  <link rel="icon" href="../images/icons/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../css/master.css">
+  <link rel="stylesheet" href="../css/positioning.css">
+</head>
+
+<body>
+  <header id="top">
+    <img src="../images/wd1.png" alt="logo">
+    <h1>Web Design</h1>
+  </header>
+    <nav>
+      <!--Add a navicon-->
+      <a id="navicon" href="#"><img src="../images/icons/navicon.png" alt="navicon"></a>
+      <ul>
+        <li><a href="../index.html"> <img src="../images/icons/home.png" alt="home"> Home</a></li>
+        <li><a href="fundamentals.html"> <img src="../images/icons/document.png" alt="fundamentals"> HMTL Fundamentals</a></li>
+        <li><a href="fundamentals-flex.html"> <img src="../images/icons/document.png" alt="flex"> Flex Layout</a></li>
+        <li><a href="positioning.html"> <img src="../images/icons/trello-website-logo-small.png" alt="positioning"> Position &amp; Float</a></li>
+        <li><a href="graphics.html"> <img src="../images/icons/document.png" alt="graphic"> Graphic Design</a></li>
+        <li><a href="fundamentals-static.html"> <img src="../images/icons/document.png" alt="static"> Static Layout</a></li>
+        <li><a href="dommanipulation.html"> <img src="../images/icons/document.png" alt="DOM js"> DOM manipulation</a></li>
+        <li><a href="gallery.html"> <img src="../images/icons/document.png" alt="gallery grid">Gallery Grid</a></li>
+
+      </ul>
+    </nav>
+  <main>
+    <!-- Fixed Positioning Section -->
+    <section class="container">
+      <h2>Fixed Positioning</h2>
+      <div class="fixed-container">
+        <!-- Explanation: This div will demonstrate fixed positioning -->
+        <!-- Fixed positioning is used to position an element relative to the browser window -->
+        <!-- It will remain in the same place even when the page is scrolled -->
+        <div id="box-fixed" class="box box-fixed-pos box-purple">
+          <p class="center">Fixed Box</p>
+        </div>
+      </div>
+      <p>
+        This box is fixed at a certain position on the screen. As you scroll,
+        notice how it stays in the same place relative to the viewport in the
+        way top right of your screen. Fixed positioning is often used for
+        elements like navigation bars or advertisements that need to remain
+        visible regardless of scrolling.
+      </p>
+    </section>
+    <section class="container">
+      <h2>Static Positioning (normal flow)</h2>
+      <div id="box-1" class="box box-red">
+        <p class="center">1</p>
+      </div>
+      <div id="box-2" class="box box-green">
+        <p class="center">2</p>
+      </div>
+      <div id="box-3" class="box box-blue">
+        <p class="center">3</p>
+      </div>
+      <hr>
+      <div id="box-4" class="box box-inline-block box-light-coral">
+        <p class="center">4</p>
+      </div>
+      <div id="box-5" class="box box-inline-block box-light-green">
+        <p class="center">5</p>
+      </div>
+      <div id="box-6" class="box box-inline-block box-light-sky-blue">
+        <p class="center">6</p>
+      </div>
+    </section>
+    <section class="container">
+      <h2>Relative Positioning</h2>
+      <div id="box-7" class="box box-relative-pos box-red">
+        <p class="center">7</p>
+      </div>
+      <div id="box-8" class="box box-relative-pos box-green">
+        <p class="center">8</p>
+      </div>
+      <div id="box-9" class="box box-relative-pos box-blue">
+        <p class="center">9</p>
+      </div>
+      <hr>
+      <div id="box-10" class="box box-inline-block box-relative-pos box-light-coral">
+        <p class="center">10</p>
+      </div>
+      <div id="box-11" class="box box-inline-block box-relative-pos box-light-green">
+        <p class="center">11</p>
+      </div>
+      <div id="box-12" class="box box-inline-block box-relative-pos box-light-sky-blue">
+        <p class="center">12</p>
+      </div>
+    </section>
+    <section id="absolute-container" class="container">
+      <h2>Absolute Positioning &amp; Z-Index</h2>
+      <div id="box-13" class="box box-absolute-pos box-red">
+        <p class="center">13</p>
+      </div>
+      <div id="box-14" class="box box-absolute-pos box-green">
+        <p class="center">14</p>
+      </div>
+      <div id="box-15" class="box box-absolute-pos box-blue">
+        <p class="center">15</p>
+      </div>
+      <hr>
+      <div id="box-16" class="box box-inline-block box-absolute-pos box-light-coral">
+        <p class="center">16</p>
+      </div>
+      <div id="box-17" class="box box-inline-block box-absolute-pos box-light-green">
+        <p class="center">17</p>
+      </div>
+      <div id="box-18" class="box box-inline-block box-absolute-pos box-light-sky-blue">
+        <p class="center">18</p>
+      </div>
+    </section>
+    <section class="container">
+      <h2>Use of Float for layout Positioning</h2>
+      <div id="box-19" class="box box-float-pos box-red">
+        <p class="center">19</p>
+      </div>
+      <div id="box-20" class="box box-float-pos box-green">
+        <p class="center">20</p>
+      </div>
+      <div id="box-21" class="box box-float-pos box-blue">
+        <p class="center">21</p>
+      </div>
+      <hr>
+      <div id="box-22" class="box box-inline-block box-float-pos box-light-coral">
+        <p class="center">22</p>
+      </div>
+      <div id="box-23" class="box box-inline-block box-float-pos box-light-green">
+        <p class="center">23</p>
+      </div>
+      <div id="box-24" class="box box-inline-block box-float-pos box-light-sky-blue">
+        <p class="center">24</p>
+      </div>
+    </section>
+    <section class="container">
+      <h2>Appropriate use of Float Positioning &amp; overflow</h2>
+      <div class="overflow-auto">
+        <img id="moon-img" alt="moon image" src="../images/moon-small.JPG">
+        <p>
+          Float positioning in CSS is a layout technique that allows elements
+          to be pushed to the left or right of their containing element, with
+          other content flowing around them. It's commonly used for wrapping
+          text around images, creating multi-column layouts, or positioning
+          small UI elements like icons. When an element is floated, it's taken
+          out of the normal document flow, which can sometimes lead to
+          unexpected layout behavior. Therefore, it's crucial to manage floats
+          carefully, often by clearing them to prevent layout issues. While
+          floats have been a staple of web design for years, they're gradually
+          being replaced by more modern layout techniques like Flexbox and
+          Grid in many scenarios, especially for responsive designs where
+          float-based layouts can be problematic at different screen sizes.
+        </p>
+        <p>
+          Overflow in CSS controls how content behaves when it exceeds the
+          dimensions of its containing element. This property is essential for
+          managing long content, creating scrollable areas, or clipping
+          content that goes beyond set boundaries. The default overflow
+          behavior (visible) allows content to spill outside its container,
+          while other values like hidden, scroll, and auto offer different
+          ways to handle excess content. Hidden clips the overflowing content,
+          scroll adds scrollbars regardless of content length, and auto adds
+          scrollbars only when necessary. Proper use of overflow can
+          significantly improve user experience by making content more
+          accessible and maintaining a clean layout, particularly in
+          situations where space is limited or when dealing with dynamic
+          content that might vary in length.
+        </p>
+        <p>
+          While float and overflow are powerful CSS properties, they can
+          introduce several challenges in web development. Floats can cause
+          layout issues if not cleared properly, leading to unexpected content
+          wrapping and container collapse problems. They also complicate
+          responsive design, often requiring media queries for different
+          screen sizes. Overuse of floats can result in complex,
+          hard-to-maintain CSS. Overflow, while useful for content management,
+          can inadvertently hide important information if not implemented
+          carefully. The scroll and auto values can lead to inconsistent user
+          experiences across different devices and browsers, particularly on
+          mobile where scrolling behavior may vary. Both properties can
+          interfere with accessibility, potentially making navigation
+          difficult for users relying on screen readers or keyboard
+          navigation. Additionally, as web design trends evolve towards more
+          flexible layouts, the limitations of float and overflow become more
+          apparent, pushing developers towards newer layout techniques like
+          Flexbox and Grid for more robust and adaptable designs.
+        </p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <address>
+      <a href="mailto:me@memyselfandi.com">me@memyselfandi.com</a><br>
+      <a href="tel:+15555555555">(555)555&dash;5555</a>
+      <p>
+        555 Fake Street South<br>
+        My City, ST 12345
+      </p>
+    </address>
+    <p>© 2024 Web Design 1</p>
+    <a href="#top">Go to Top</a>
+  </footer>
+</body>
+
+</html>

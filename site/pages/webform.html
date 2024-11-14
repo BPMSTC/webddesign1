@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminar Registration Form</title>
+    <link rel="stylesheet" href="../css/webform.css">
+    <script src="../js/webform.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <div class="ai-circuit ai-circuit-1"></div>
+        <div class="ai-circuit ai-circuit-2"></div>
+        <div class="form-header">
+            <div class="logo-container">
+                <img src="../images/ailogo.webp" alt="AI Conference Logo" class="logo">
+            </div>
+            <h1>AI Conference .2024</h1>
+            <p>Join us for a transformative exploration of artificial intelligence</p>
+        </div>
+        <form id="seminarForm" novalidate>
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+                <div class="error" id="nameError">Please enter your name</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error" id="emailError">Please enter a valid email address</div>
+            </div>
+
+            <div class="form-group">
+                <label for="company" class="required">Company</label>
+                <input type="text" id="company" name="company" required>
+                <div class="error" id="companyError">Company name is required</div>
+            </div>
+
+            <div class="form-group">
+                <label for="registration-date">Date of Registration *</label>
+                <input type="date" id="registration-date" name="registration-date" required>
+                <div class="error" id="dateError">Please select a date</div>
+            </div>
+
+            <div class="form-group">
+                <label class="required">Select AI Conference Sessions (2-5 sessions required)</label>
+                <div class="checkbox-container">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="session1" name="sessions" value="keynote">
+                        <label for="session1">Keynote: The Future of AI (9:00 AM - 10:30 AM)</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="session2" name="sessions" value="machine-learning">
+                        <label for="session2">Machine Learning Workshop (11:00 AM - 12:30 PM)</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="session3" name="sessions" value="ethics">
+                        <label for="session3">AI Ethics Panel Discussion (1:30 PM - 3:00 PM)</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="session4" name="sessions" value="neural-networks">
+                        <label for="session4">Neural Networks Deep Dive (3:30 PM - 5:00 PM)</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="session5" name="sessions" value="robotics">
+                        <label for="session5">AI in Robotics Showcase (5:30 PM - 7:00 PM)</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="session6" name="sessions" value="future-tech">
+                        <label for="session6">Future Tech Round Table (7:30 PM - 9:00 PM)</label>
+                    </div>
+                </div>
+                <div class="error" id="sessionsError">Please select between 2 and 5 sessions</div>
+                <div class="helper-text">Selected: <span id="sessionCount">0</span>/5</div>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Additional Comments</label>
+                <textarea 
+                    id="comments" 
+                    name="comments" 
+                    rows="4" 
+                    placeholder="Share any dietary requirements, accessibility needs, or questions..."
+                ></textarea>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="submit-btn">Register Now</button>
+                <button type="reset" class="reset-btn">Clear Form</button>
+            </div>
+        </form>
+        <div class="success-message" id="successMessage">
+            Thank you for your registration! We'll be in touch shortly.
+        </div>
+    </div>
+
+ 
+</body>
+</html>
+
